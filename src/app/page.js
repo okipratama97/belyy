@@ -350,14 +350,6 @@ export default function Home() {
               "/IMG_7.JPG",
               "/IMG_8.JPG",
               "/IMG_9.JPG",
-              "/IMG_11.JPG",
-              "/IMG_12.JPG",
-              "/IMG_13.JPG",
-              "/IMG_14.JPG",
-              "/IMG_15.JPG",
-              "/IMG_17.JPG",
-              "/IMG_18.JPG",
-              "/IMG_19.JPG",
             ].map((src, index) => (
               <div key={index} className="mx-4 flex-shrink-0">
                 <div className="h-80 w-64 overflow-hidden rounded-2xl shadow-lg">
