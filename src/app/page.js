@@ -84,7 +84,7 @@ export default function Home() {
             />
             <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
               <PixelImage
-                src="/IMG_1.JPG"
+                src="/IMG_1_resized.JPG"
                 pixelFadeInDuration={1000}
                 maxAnimationDelay={2000}
               />
@@ -139,8 +139,7 @@ export default function Home() {
             />
             <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
               <PixelImage
-                src="/IMG_2.JPG"
-                grid="8x8"
+                src="/IMG_2_resized.JPG"
                 pixelFadeInDuration={1000}
                 maxAnimationDelay={2000}
               />
@@ -195,8 +194,7 @@ export default function Home() {
             />
             <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
               <PixelImage
-                src="/IMG_4.JPG"
-                grid="8x8"
+                src="/IMG_4_resized.JPG"
                 pixelFadeInDuration={1000}
                 maxAnimationDelay={2000}
               />
@@ -251,8 +249,7 @@ export default function Home() {
             />
             <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
               <PixelImage
-                src="/IMG_5.JPG"
-                grid="8x8"
+                src="/IMG_5_resized.JPG"
                 pixelFadeInDuration={1000}
                 maxAnimationDelay={2000}
               />
@@ -306,7 +303,7 @@ export default function Home() {
             />
             <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
               <PixelImage
-                src="/IMG_6.JPG"
+                src="/IMG_6_resized.JPG"
                 pixelFadeInDuration={1000}
                 maxAnimationDelay={2000}
               />
@@ -341,14 +338,14 @@ export default function Home() {
         <div className="relative z-10 w-full">
           <Marquee className="[--duration:30s]" pauseOnHover>
             {[
-              "/IMG_1.JPG",
-              "/IMG_2.JPG",
-              "/IMG_4.JPG",
-              "/IMG_5.JPG",
-              "/IMG_6.JPG",
-              "/IMG_7.JPG",
-              "/IMG_8.JPG",
-              "/IMG_9.JPG",
+              "/IMG_1_resized.JPG",
+              "/IMG_2_resized.JPG",
+              "/IMG_4_resized.JPG",
+              "/IMG_5_resized.JPG",
+              "/IMG_6_resized.JPG",
+              "/IMG_7_resized.JPG",
+              "/IMG_8_resized.JPG",
+              "/IMG_9_resized.JPG",
             ].map((src, index) => (
               <div key={index} className="mx-4 flex-shrink-0">
                 <div className="h-80 w-64 overflow-hidden rounded-2xl shadow-lg">
