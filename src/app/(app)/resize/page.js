@@ -10,24 +10,57 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import imageCompression from "browser-image-compression";
 
 export default function ResizePage() {
   const [image, setImage] = useState(null);
+  const [compressedFile, setCompressedFile] = useState(null);
+  const [originalName, setOriginalName] = useState("");
   const fileInputRef = useRef(null);
 
-  const handleUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
+  const handleButtonClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleImageUpload = async (event) => {
+    const imageFile = event.target.files[0];
+    if (!imageFile) return;
+
+    setOriginalName(imageFile.name);
+
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 1920,
+      useWebWorker: true,
+    };
+
+    try {
+      const compressedFile = await imageCompression(imageFile, options);
+      setCompressedFile(compressedFile);
+
       const reader = new FileReader();
       reader.onloadend = () => {
         setImage(reader.result);
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(compressedFile);
+    } catch (error) {
+      console.log(error);
     }
   };
 
-  const handleButtonClick = () => {
-    fileInputRef.current?.click();
+  const handleDownload = () => {
+    if (!compressedFile) return;
+
+    const url = URL.createObjectURL(compressedFile);
+    const link = document.createElement("a");
+    link.href = url;
+    const nameWithoutExt = originalName.replace(/\.[^/.]+$/, "");
+    const ext = originalName.split(".").pop();
+    link.download = `${nameWithoutExt}_resized.${ext}`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -52,19 +85,22 @@ export default function ResizePage() {
             ref={fileInputRef}
             type="file"
             accept="image/*"
-            onChange={handleUpload}
+            onChange={handleImageUpload}
             className="hidden"
           />
           <ShimmerButton onClick={handleButtonClick} className="w-full">
             Choose File
           </ShimmerButton>
           {image && (
-            <div className="mt-4">
+            <div className="mt-4 space-y-4">
               <img
                 src={image}
                 alt="Uploaded"
                 className="w-full h-auto rounded-md"
               />
+              <ShimmerButton onClick={handleDownload} className="w-full">
+                Download Resized Image
+              </ShimmerButton>
             </div>
           )}
         </CardContent>
