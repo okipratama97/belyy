@@ -1,21 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { LightRays } from "@/components/ui/light-rays";
 import { PixelImage } from "@/components/ui/pixel-image";
-import { NoiseTexture } from "@/components/ui/noise-texture";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import { ShineBorder } from "@/components/ui/shine-border";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Marquee } from "@/components/ui/marquee";
 
 export default function Home() {
