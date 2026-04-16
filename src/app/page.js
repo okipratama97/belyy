@@ -40,8 +40,7 @@ export default function Home() {
           // maxOpacity={0.5}
           flickerChance={0.1}
         />
-
-        <h1 className="relative z-10 text-4xl font-bold text-gray-800 dark:text-gray-200">
+        <h1 className="relative z-10 text-4xl font-bold text-gray-800 dark:text-gray-200 max-w-6xl text-center px-6">
           Ini bukan tentang kisah yang sempurna, tapi tentang kita yang terus
           memilih satu sama lain, setiap hari.
         </h1>
