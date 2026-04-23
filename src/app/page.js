@@ -1,396 +1,50 @@
 "use client";
 
-import { useRef } from "react";
+import Link from "next/link";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import { LightRays } from "@/components/ui/light-rays";
-import { PixelImage } from "@/components/ui/pixel-image";
-import { Dock, DockIcon } from "@/components/ui/dock";
-import { ShineBorder } from "@/components/ui/shine-border";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Marquee } from "@/components/ui/marquee";
 
 export default function Home() {
-  const scrollContainerRef = useRef(null);
-
-  const scrollToTop = () => {
-    scrollContainerRef.current?.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
-    <div
-      ref={scrollContainerRef}
-      className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory"
-    >
-      {/* Scroll #1: Home area, introduction to the page */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        <FlickeringGrid
-          className="absolute inset-0 z-0 pointer-events-none [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
-          squareSize={4}
-          gridGap={6}
-          color="#60A5FA"
-          // maxOpacity={0.5}
-          flickerChance={0.1}
-        />
-        <h1 className="relative z-10 text-4xl font-bold text-gray-800 dark:text-gray-200 max-w-6xl text-center px-6">
-          Ini bukan tentang kisah yang sempurna, tapi tentang kita yang terus
-          memilih satu sama lain, setiap hari.
-        </h1>
-        <p className="relative z-10 mt-4 text-lg text-gray-600 dark:text-gray-400">
-          Welcome, My Dearest Love. This is a special place where I pour out my
-          heart and soul.
-        </p>
-        {/* <ShimmerButton className="relative z-10 mt-6">Click Me</ShimmerButton> */}
-      </div>
+    <div className="relative flex flex-col items-center justify-center h-screen w-full overflow-hidden bg-gradient-to-br from-rose-50 via-white to-pink-50 dark:from-slate-950 dark:via-slate-900 dark:to-rose-950 font-sans">
+      <FlickeringGrid
+        className="absolute inset-0 z-0 pointer-events-none [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+        squareSize={4}
+        gridGap={6}
+        color="#ec4899"
+        flickerChance={0.1}
+      />
 
-      {/* Scroll #2.1: Gallery area to show our pictures */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#60A5FA"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={2}
-        />
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#e77eaa"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={4}
-        />
-
-        <div className="relative z-10 flex items-center justify-center pl-12">
-          <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
-            <div className="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-500 to-blue-300"></div>
-          </div>
-          <Card className="relative flex flex-row items-center gap-6 rounded-[2rem] border-white/20 bg-white/80 p-6 shadow-[0_30px_90px_-40px_rgba(15,23,42,0.6)] backdrop-blur-xl w-full max-w-[760px]">
-            <ShineBorder
-              shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-              className="absolute inset-0 rounded-[2rem] pointer-events-none"
-            />
-            <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
-              <PixelImage
-                src="/IMG_1_resized.JPG"
-                pixelFadeInDuration={1000}
-                maxAnimationDelay={2000}
-              />
-            </div>
-            <CardContent className="relative flex-1 p-0">
-              <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-                  Di awal kita berjumpa..
-                </CardTitle>
-              </CardHeader>
-              <p className="text-gray-600 dark:text-gray-400">
-                Di tengah ramainya MOI, di antara suara dan cahaya dari event
-                Sonic itu… aku nggak nyangka, justru di sana aku menemukan awal
-                dari cerita kita.
-              </p>
-            </CardContent>
-          </Card>
+      <div className="relative z-10 flex flex-col items-center justify-center gap-12">
+        <div className="flex flex-col items-center gap-4">
+          <h1 className="text-6xl font-playfair font-bold bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 bg-clip-text text-transparent max-w-2xl text-center px-6">
+            Welcome, My Dearest Love
+          </h1>
+          <p className="font-lora text-lg text-rose-400 dark:text-rose-300 font-light tracking-wide">
+            ✨ A special place, just for us ✨
+          </p>
         </div>
-      </div>
 
-      {/* Scroll #2.2: Gallery area to show our pictures */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#60A5FA"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={2}
-        />
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#e77eaa"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={4}
-        />
+        <div className="flex flex-col gap-6 sm:flex-row">
+          <Link
+            href="/2-months-aniv"
+            className="group relative px-10 py-4 bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-lora font-medium rounded-full shadow-lg hover:shadow-2xl hover:shadow-rose-400/50 transition-all duration-300 hover:scale-110 overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              💕 2 Months Anniversary
+            </span>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white transition-opacity duration-300"></div>
+          </Link>
 
-        <div className="relative z-10 flex items-center justify-center pl-12">
-          <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-300 to-blue-500"></div>
-            <div className="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-500 to-blue-300"></div>
-          </div>
-          <Card className="relative flex flex-row items-center gap-6 rounded-[2rem] border-white/20 bg-white/80 p-6 shadow-[0_30px_90px_-40px_rgba(15,23,42,0.6)] backdrop-blur-xl w-full max-w-[760px]">
-            <ShineBorder
-              shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-              className="absolute inset-0 rounded-[2rem] pointer-events-none"
-            />
-            <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
-              <PixelImage
-                src="/IMG_2_resized.JPG"
-                pixelFadeInDuration={1000}
-                maxAnimationDelay={2000}
-              />
-            </div>
-            <CardContent className="relative flex-1 p-0">
-              <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-                  Bunga Pertama 🌺
-                </CardTitle>
-              </CardHeader>
-              <p className="text-gray-600 dark:text-gray-400">
-                Valentine mungkin sudah lewat, tapi perasaanku baru benar-benar
-                berani hari itu. Dengan satu bunga di tangan, aku mencoba
-                memulai cerita &apos;Kita&apos;.
-              </p>
-            </CardContent>
-          </Card>
+          <Link
+            href="/visi-misi"
+            className="group relative px-10 py-4 bg-gradient-to-r from-amber-300 via-rose-300 to-pink-400 hover:from-amber-400 hover:via-rose-400 hover:to-pink-500 text-white font-lora font-medium rounded-full shadow-lg hover:shadow-2xl hover:shadow-rose-300/50 transition-all duration-300 hover:scale-110 overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              🌹 Visi & Misi
+            </span>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white transition-opacity duration-300"></div>
+          </Link>
         </div>
-      </div>
-
-      {/* Scroll #2.2: Gallery area to show our pictures */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#60A5FA"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={2}
-        />
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#e77eaa"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={4}
-        />
-
-        <div className="relative z-10 flex items-center justify-center pl-12">
-          <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-300 to-blue-500"></div>
-            <div className="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-500 to-blue-300"></div>
-          </div>
-          <Card className="relative flex flex-row items-center gap-6 rounded-[2rem] border-white/20 bg-white/80 p-6 shadow-[0_30px_90px_-40px_rgba(15,23,42,0.6)] backdrop-blur-xl w-full max-w-[760px]">
-            <ShineBorder
-              shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-              className="absolute inset-0 rounded-[2rem] pointer-events-none"
-            />
-            <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
-              <PixelImage
-                src="/IMG_4_resized.JPG"
-                pixelFadeInDuration={1000}
-                maxAnimationDelay={2000}
-              />
-            </div>
-            <CardContent className="relative flex-1 p-0">
-              <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-                  Satu Bulan Kisah Kita
-                </CardTitle>
-              </CardHeader>
-              <p className="text-gray-600 dark:text-gray-400">
-                Satu bulan ini nggak terasa terburu-buru. Kita jalan
-                pelan-pelan, kenal satu sama lain, dan tanpa sadar… jadi saling
-                butuh.”
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-
-      {/* Scroll #2.2: Gallery area to show our pictures */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#60A5FA"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={2}
-        />
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#e77eaa"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={4}
-        />
-
-        <div className="relative z-10 flex items-center justify-center pl-12">
-          <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-300 to-blue-500"></div>
-            <div className="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-500 to-blue-300"></div>
-          </div>
-          <Card className="relative flex flex-row items-center gap-6 rounded-[2rem] border-white/20 bg-white/80 p-6 shadow-[0_30px_90px_-40px_rgba(15,23,42,0.6)] backdrop-blur-xl w-full max-w-[760px]">
-            <ShineBorder
-              shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-              className="absolute inset-0 rounded-[2rem] pointer-events-none"
-            />
-            <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
-              <PixelImage
-                src="/IMG_5_resized.JPG"
-                pixelFadeInDuration={1000}
-                maxAnimationDelay={2000}
-              />
-            </div>
-            <CardContent className="relative flex-1 p-0">
-              <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-                  Film Pertama Kita
-                </CardTitle>
-              </CardHeader>
-              <p className="text-gray-600 dark:text-gray-400">
-                Film pertama kita jatuhnya horror. Tapi anehnya, yang paling
-                bikin deg-degan bukan di layar… melainkan karena ada kamu di
-                sebelahku.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-
-      {/* Scroll #2.3: Gallery area to show our pictures */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#60A5FA"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={2}
-        />
-        <LightRays
-          className="absolute inset-0 z-0 pointer-events-none "
-          // squareSize={4}
-          // gridGap={6}
-          color="#e77eaa"
-          maxOpacity={0.3}
-          flickerChance={0.1}
-          count={4}
-        />
-
-        <div className="relative z-10 flex items-center justify-center pl-12">
-          <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
-            <div className="w-1 flex-1 bg-gradient-to-b from-blue-300 to-blue-500"></div>
-            <div className="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
-          </div>
-          <Card className="relative flex flex-row items-center gap-6 rounded-[2rem] border-white/20 bg-white/80 p-6 shadow-[0_30px_90px_-40px_rgba(15,23,42,0.6)] backdrop-blur-xl w-full max-w-[760px]">
-            <ShineBorder
-              shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-              className="absolute inset-0 rounded-[2rem] pointer-events-none"
-            />
-            <div className="relative flex-none overflow-hidden rounded-[1.75rem] w-[320px] h-[240px]">
-              <PixelImage
-                src="/IMG_6_resized.JPG"
-                pixelFadeInDuration={1000}
-                maxAnimationDelay={2000}
-              />
-            </div>
-            <CardContent className="relative flex-1 p-0">
-              <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-                  Masih Kamu, Sampai Hari Ini
-                </CardTitle>
-              </CardHeader>
-              <p className="text-gray-600 dark:text-gray-400">
-                Dua bulan sudah berlalu, dan lucunya… rasanya masih kamu orang
-                yang sama yang aku pilih di awal. Bedanya, sekarang aku jauh
-                lebih yakin.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-
-      {/* Scroll #2.6: Photo Marquee */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        <div className="absolute inset-0 z-0">
-          <LightRays
-            className="absolute inset-0 z-0 pointer-events-none"
-            color="#60A5FA"
-            maxOpacity={0.2}
-            flickerChance={0.1}
-            count={2}
-          />
-        </div>
-        <div className="relative z-10 w-full">
-          <Marquee className="[--duration:30s]" pauseOnHover>
-            {[
-              "/IMG_1_resized.JPG",
-              "/IMG_2_resized.JPG",
-              "/IMG_4_resized.JPG",
-              "/IMG_5_resized.JPG",
-              "/IMG_6_resized.JPG",
-              "/IMG_7_resized.JPG",
-              "/IMG_8_resized.JPG",
-              "/IMG_9_resized.JPG",
-            ].map((src, index) => (
-              <div key={index} className="mx-4 flex-shrink-0">
-                <div className="h-80 w-64 overflow-hidden rounded-2xl shadow-lg">
-                  <img
-                    src={src}
-                    alt={`Memory ${index + 1}`}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              </div>
-            ))}
-          </Marquee>
-        </div>
-      </div>
-
-      {/* Scroll #3: Finish area, back to start button */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white overflow-hidden h-screen w-full snap-start snap-always">
-        {/* <NoiseTexture
-          className="absolute inset-0 z-0 pointer-events-none"
-          frequency={0.4} // note: size of noise features, bigger values mean smaller features
-          octaves={6}
-          slope={0.1} // note: how quickly the noise changes across space or roughness of the noise
-          noiseOpacity={0.5} // note: opacity of the noise layer, between 0 and 1
-        />
-        <div className="absolute inset-0 z-5 bg-white/10 pointer-events-none"></div> */}
-        <h1 className="relative z-10 text-4xl font-bold text-gray-800 dark:text-gray-200 max-w-4xl text-center px-6">
-          Dua bulan mungkin bukan waktu yang panjang bagi dunia.
-        </h1>
-        <p className="relative z-10 mt-4 text-lg text-gray-600 dark:text-gray-400  max-w-4xl text-center px-6">
-          Tapi buat aku, dua bulan ini penuh dengan banyak hal kecil yang
-          berarti. Terima kasih sudah hadir, sudah bertahan, dan sudah memilih
-          untuk tetap di sini bersama aku. Aku nggak tahu ke mana kita akan
-          pergi setelah ini, tapi untuk hari ini… aku bersyukur kita masih
-          `kita`. Selamat 2 bulan anniversary, sayang. Semoga kita selalu punya
-          alasan untuk tetap saling memilih, pelan-pelan, setiap hari.
-        </p>
-        <p className="relative z-10 mt-4 text-lg text-gray-600 dark:text-gray-400  max-w-4xl text-center px-6">
-          Happy 2 Months Anniversary, My Dearest Love ❤️.
-        </p>
-
-        <Dock direction="middle" iconMagnification={60} iconDistance={100}>
-          <DockIcon key={1}>
-            <svg
-              onClick={scrollToTop}
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#60A5FA"
-            >
-              <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
-            </svg>
-          </DockIcon>
-        </Dock>
       </div>
     </div>
   );
