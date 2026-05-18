@@ -1,8 +1,8 @@
 "use client";
 
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import Image from "next/image";
 import { useState, useEffect } from "react";
+import FoldablePhotoCard from "./FoldablePhotoCard";
 
 const TimeUnit = ({ label, value, isVisible = true }) => (
   <div
@@ -115,28 +115,8 @@ export default function HeroSection() {
       />
 
       <div className="relative z-10 flex flex-col items-center justify-center">
-        {/* Circular Photo */}
-        <div
-          className="mb-8 p-2 bg-white rounded-full shadow-lg relative"
-          style={{ width: "220px", height: "220px" }}
-        >
-          {/* Side Emojis for Photo */}
-          <div className="absolute -left-16 top-1/2 transform -translate-y-1/2 text-2xl">
-            💞
-          </div>
-          <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 text-2xl">
-            💞
-          </div>
-
-          <Image
-            src="/IMG_2_resized.JPG"
-            alt="in love for"
-            className="w-full h-full object-cover rounded-full"
-            width={220}
-            height={220}
-            loading="eager"
-          />
-        </div>
+        {/* Foldable Photo Card */}
+        <FoldablePhotoCard />
 
         <h2
           className="text-4xl font-bold mb-12 uppercase tracking-widest"
@@ -146,7 +126,7 @@ export default function HeroSection() {
             fontFamily: "var(--font-literata)",
           }}
         >
-          in love for 💕
+          in love for
         </h2>
 
         <div
