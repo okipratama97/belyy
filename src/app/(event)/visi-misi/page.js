@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import VisiSection from "./components/VisiSection";
 import MisiSection from "./components/MisiSection";
 import MimiPipiSection from "./components/MimiPipiSection";
+import EternalPromiseSection from "./components/EternalPromiseSection";
 
 export default function VisiMisiPage() {
   return (
@@ -12,6 +13,7 @@ export default function VisiMisiPage() {
       <VisiSection />
       <MisiSection />
       <MimiPipiSection />
+      <EternalPromiseSection />
     </div>
   );
 }
