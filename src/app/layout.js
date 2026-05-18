@@ -4,6 +4,7 @@ import {
   Playfair_Display,
   Lora,
   Dancing_Script,
+  Literata,
 } from "next/font/google";
 import "./globals.css";
 
@@ -35,6 +36,13 @@ const dancingScript = Dancing_Script({
   weight: ["400", "500", "600", "700"],
 });
 
+const literata = Literata({
+  variable: "--font-literata",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata = {
   title: "Belyy",
   description: "A white app, about us",
@@ -44,7 +52,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${lora.variable} ${dancingScript.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${lora.variable} ${dancingScript.variable} ${literata.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

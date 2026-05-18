@@ -36,6 +36,16 @@ export default function Home() {
           </Link>
 
           <Link
+            href="/timeline"
+            className="group relative px-10 py-4 bg-gradient-to-r from-amber-300 via-rose-300 to-pink-400 hover:from-amber-400 hover:via-rose-400 hover:to-pink-500 text-white font-lora font-medium rounded-full shadow-lg hover:shadow-2xl hover:shadow-rose-300/50 transition-all duration-300 hover:scale-110 overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              ✨ Timeline
+            </span>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white transition-opacity duration-300"></div>
+          </Link>
+
+          <Link
             href="/visi-misi"
             className="group relative px-10 py-4 bg-gradient-to-r from-amber-300 via-rose-300 to-pink-400 hover:from-amber-400 hover:via-rose-400 hover:to-pink-500 text-white font-lora font-medium rounded-full shadow-lg hover:shadow-2xl hover:shadow-rose-300/50 transition-all duration-300 hover:scale-110 overflow-hidden"
           >
