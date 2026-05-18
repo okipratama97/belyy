@@ -156,24 +156,28 @@ export default function HeroSection() {
           onMouseLeave={() => setIsHovered(false)}
         >
           <TimeUnit
-            label="Tahun"
+            label="Years"
             value={timeDifference.years}
             isVisible={isHovered}
           />
           <TimeUnit
-            label="Bulan"
+            label="Months"
             value={timeDifference.months}
             isVisible={true}
           />
-          <TimeUnit label="Hari" value={timeDifference.days} isVisible={true} />
-          <TimeUnit label="Jam" value={timeDifference.hours} isVisible={true} />
+          <TimeUnit label="Days" value={timeDifference.days} isVisible={true} />
           <TimeUnit
-            label="Menit"
+            label="Hours"
+            value={timeDifference.hours}
+            isVisible={true}
+          />
+          <TimeUnit
+            label="Minutes"
             value={timeDifference.minutes}
             isVisible={isHovered}
           />
           <TimeUnit
-            label="Detik"
+            label="Seconds"
             value={timeDifference.seconds}
             isVisible={isHovered}
           />
