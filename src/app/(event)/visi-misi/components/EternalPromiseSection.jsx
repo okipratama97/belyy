@@ -7,7 +7,7 @@ const promiseMimi =
   "i promise to u, mas Okky. u r the last man i want to fight for. ❤️ it's not abt who came first, but abt who i want to stay with until the very end.🥰 i promise to protect this love, stay loyal to the heart that has chosen u, and keep loving u even on the difficult days. cause to me, u r not just love... u are a part of the future i want to have. 🥺✨💍🫂💕💞💋";
 
 const promisePipi =
-  "Akuu jaanjiii cayaangkuu bbykuuu Hilyaa, sebagaaii wanita pertama dan terakhir akuu 🥰🥰💕❤️🫰✨✨💍";
+  "Aku janjii yaa cayaangkuu Hilya. Kamuu adalah wanita pertama dan terakhir di hidupku, dan juga satu satunya masa depan yang mau untuk aku perjuangkan.  Aku berjanji akan selalu menjaga hati ini cuma buat kamu, setia di sampingmu, menjaga kebahagian kita bersama, dan tetap menggenggam tanganmu bahkan di hari hari yang paling sulit sekalipun sayangg. Karena  dengan bersama kamu, aku bukan tidak hanya menemukan cinta, tapi juga rumah tempat aku selalu pulang sampai hari tua nanti. 🥺✨💍🫂💕💞";
 
 export default function EternalPromiseSection() {
   const [hoveredSection, setHoveredSection] = useState(null);
