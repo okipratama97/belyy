@@ -149,7 +149,7 @@ export default function HeroSection() {
 
 Hari kita dimulai dengan sangat seru! Masih ingat kan betapa semangatnya kita membuat foto dan video bersama di awal hari? Oh iya, ada satu memori kecil yang lucu banget pas kita lihat kolam ikan. Kamu ingat kan ada satu ikan spesial warna putih polos yang langsung jadi favoritmu di sana? Gemas banget melihat antusiasme kamu waktu itu ><!
 
-Petualangan air kita lalu berlanjut saat kita mengarungi kolam arus dan bermain banyak sekali di sana. Di tengah tenangnya arus, kamu ingat juga kan saat kita kiss di kolam ini? Bikin momennya jadi makin spesial 🫣❤️. Keseruan makin pecah pas kita pindah ke kolam ombak. Gimana rasanya diterjang ombak yang kuat banget ke badan kita? Rasanya sampai mau terpelanting ya, haha! Tapi justru itu yang bikin kita ketawa lepas banget.
+Petualangan air kita lalu berlanjut saat kita mengarungi kolam arus dan bermain banyak sekali di sana. Di tengah tenangnya arus, kamu ingat juga kan saat kita main-main di kolam ini? Bikin momennya jadi makin spesial 🫣❤️. Keseruan makin pecah pas kita pindah ke kolam ombak. Gimana rasanya diterjang ombak yang kuat banget ke badan kita? Rasanya sampai mau terpelanting ya, haha! Tapi justru itu yang bikin kita ketawa lepas banget.
 
 Nggak kalah seru, kita juga sempat main semprotan sabun dan kejar-kejaran ikat rambut. Huhuuu, pokoknya aku tetap claim aku yang menang di sini, walaupun wleee... sebenarnya kita seri sih, I know 😜. Hari itu aku juga bangga banget sama kamu, kamu berani buat main seluncuran, pintell banget pacarku! Tapi dari semua itu, yang paling bikin aku senang dan tersentuh adalah melihat kamu mau belajar berenang. I'm so proud of you.
 
